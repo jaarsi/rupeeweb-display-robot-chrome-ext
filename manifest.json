@@ -1,0 +1,17 @@
+{    
+    "name": "rupeeweb-display-robot",
+    "version": "0.0.1",
+    "description": "rupeeweb-display-robot",    
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false      
+    },
+    "permissions": [
+        "activeTab",        
+        "https://www.rupee.com.br/*"
+    ],  
+    "browser_action": {
+        "default_title": "rupeeweb-display-robot"
+    },
+    "manifest_version": 2
+  }
