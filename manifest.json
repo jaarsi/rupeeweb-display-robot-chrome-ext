@@ -7,8 +7,9 @@
         "persistent": false      
     },
     "permissions": [
+        "tabs",
         "activeTab",        
-        "https://www.rupee.com.br/*"
+        "https://app.rupee.com.br/*"
     ],  
     "browser_action": {
         "default_title": "rupeeweb-display-robot"
