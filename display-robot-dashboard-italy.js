@@ -9,12 +9,10 @@
                 var reached_bottom = ((window.pageYOffset - last_window_pageyoffset) == 0);
                 if (!reached_bottom) {
                     last_window_pageyoffset = window.pageYOffset;
-                    console.log(window.pageYOffset - last_window_pageyoffset);
                     window.scrollBy(0, 8);
                 } else {
                     clearInterval(drcp_interval);                    
                     var next_url = "https://app.rupee.com.br/dashboard_mundo";
-                    console.log('vazando daqui', next_url);
                     setTimeout(() => window.location.href = next_url, wait_time_before_go);
                 }
             } catch (err) {
