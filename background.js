@@ -3,8 +3,8 @@ function inject_script(tab) {
         chrome.tabs.executeScript(tab.id, {file: 'display-robot-company-panel.js'})
     else if (tab.url.match(/^(https:\/\/app.rupee.com.br\/dashboard_italia)/gi))
         chrome.tabs.executeScript(tab.id, {file: 'display-robot-dashboard-italy.js'})
-    else if (tab.url.match(/^(https:\/\/app.rupee.com.br\/dashboard_mundo)/gi))
-        chrome.tabs.executeScript(tab.id, {file: 'display-robot-dashboard-mundi.js'});
+    // else if (tab.url.match(/^(https:\/\/app.rupee.com.br\/dashboard_mundo)/gi))
+    //     chrome.tabs.executeScript(tab.id, {file: 'display-robot-dashboard-mundi.js'});
 }
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
