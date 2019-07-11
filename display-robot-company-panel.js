@@ -31,7 +31,7 @@
             }
         }
     };
-    var wait_time_before_go = 1000;
-    var scroll_speed = 200;
+    var wait_time_before_go = 10;
+    var scroll_speed = 10;
     var drcp_interval = setInterval(g(), scroll_speed);
 })();

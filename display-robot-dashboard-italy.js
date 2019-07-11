@@ -8,6 +8,7 @@
         'https://app.rupee.com.br/dashboard_italia?status=waiting&per_page=20',
         'https://app.rupee.com.br/dashboard_italia?status=delayed&per_page=20',
         'https://app.rupee.com.br/dashboard_italia?status=delivered_file&per_page=20',
+        'https://app.rupee.com.br/dashboard_italia?status=non_applicable&per_page=20',
         'https://app.rupee.com.br/dashboard_italia?status=external_repo&per_page=20',
         'https://app.rupee.com.br/dashboard_italia?status=attention&per_page=20'
     ]
@@ -26,8 +27,11 @@
                     var next_url;
                     if (current_url_ix < DASHBOARD_ITALY_STATUS_URLS.length-1) 
                         next_url = DASHBOARD_ITALY_STATUS_URLS[current_url_ix+1]
-                    else
-                        next_url = window.sessionStorage.getItem('next_company_url');                        
+                    else {
+                        next_url = window.sessionStorage.getItem('next_company_url');
+                        if (next_url == null || next_url == "undefined")
+                            next_url = "https://app.rupee.com.br/";
+                    }                        
                     setTimeout(() => window.location.href = next_url, wait_time_before_go);
                 }
             } catch (err) {
@@ -36,7 +40,7 @@
             }
         }
     };
-    var wait_time_before_go = 1000;
-    var scroll_speed = 200;
+    var wait_time_before_go = 10;
+    var scroll_speed = 10;
     var drcp_interval = setInterval(g(), scroll_speed);
 })();
