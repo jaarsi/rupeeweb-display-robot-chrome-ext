@@ -1,5 +1,5 @@
 function inject_script(tab) {
-    if (tab.url.match(/^(https:\/\/app.rupee.com.br\/empresas\/\d+)/gi))
+    if (tab.url.match(/^(https:\/\/app.rupee.com.br\/companies\/\d+)/gi))
         chrome.tabs.executeScript(tab.id, {file: 'display-robot-company-panel.js'})
     else if (tab.url.match(/^(https:\/\/app.rupee.com.br\/dashboard_italia)/gi))
         chrome.tabs.executeScript(tab.id, {file: 'display-robot-dashboard-italy.js'})
